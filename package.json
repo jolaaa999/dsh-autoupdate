@@ -1,7 +1,7 @@
 {
   "name": "dsh-autoupdate",
   "description": "DSH plugin: safe auto-update status and manual trigger for a local deepseek-harness git clone. Surfaces the report of .git/dsh-autoupdate/sync-dsh.ps1 (safe-mode git merge, never replaces local work) and offers a one-click check in the General settings page and at /dsh-autoupdate.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": false,
   "license": "MIT",
   "type": "module",
