@@ -1,0 +1,46 @@
+{
+  "name": "dsh-autoupdate",
+  "description": "DSH plugin: safe auto-update status and manual trigger for a local deepseek-harness git clone. Surfaces the report of .git/dsh-autoupdate/sync-dsh.ps1 (safe-mode git merge, never replaces local work) and offers a one-click check in the General settings page and at /dsh-autoupdate.",
+  "version": "1.3.0",
+  "private": false,
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "README.md",
+    "README.zh.md",
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "tools/sync-dsh.ps1",
+    "tools/test-sync.ps1"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "autoupdate",
+    "git"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

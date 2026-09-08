@@ -1,0 +1,5 @@
+# dsh-autoupdate bundle patch: registers the auto-update status plugin entry.
+# Install with: dsh plugin add dsh-autoupdate
+- insert:
+    - id: dsh-autoupdate
+      name: dsh-autoupdate
